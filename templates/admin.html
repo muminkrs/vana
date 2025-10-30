@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h2>👋 Welcome, {{ admin }}</h2>
+    <a href="/logout">Logout</a>
+    <hr>
+    <h3>Add New Content</h3>
+    <form method="post">
+        Title: <input type="text" name="title"><br><br>
+        Body: <textarea name="body"></textarea><br><br>
+        <input type="submit" value="Add Content">
+    </form>
+
+    <hr>
+    <h3>Existing Contents</h3>
+    {% for c in contents %}
+        <b>{{ c.title }}</b> - {{ c.body }} <br>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask Website</title>
+</head>
+<body>
+    <h1>🏠 Welcome to My Website</h1>
+    <a href="/login">Admin Login</a>
+    <hr>
+    {% for c in contents %}
+        <h2>{{ c.title }}</h2>
+        <p>{{ c.body }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
